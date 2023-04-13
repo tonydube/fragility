@@ -1,7 +1,7 @@
 <template>
   <q-layout>
     <q-page-container class="page-container">
-      <q-page class="background-image q-pt-md q-px-xl column" style="border-bottom: 1px solid red">
+      <q-page class="background-image q-pt-md q-px-xl column">
         <Toolbar />
 
         <div class="fill-height column justify-center" style="width: 55%">
