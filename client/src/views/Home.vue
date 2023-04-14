@@ -8,8 +8,8 @@
           <div class="text-h1 text-weight-medium q-pb-lg">Your solution for agile issue management</div>
           <div class="text-h5 text-weight-regular text-grey-7 q-pb-lg">Experience the power of robust ticket tracking</div>
           <div class="">
-            <q-btn class="q-px-lg" color="primary" size="lg" label="Learn more" no-caps />
-            <q-btn class="q-ml-lg q-px-lg" size="lg" color="black" label="Get a quick tour" icon="fa-solid fa-circle-play" no-caps flat />
+            <q-btn class="q-px-lg" color="primary" size="lg" label="Learn more" no-caps @click="routeTo('dashboard')" />
+            <q-btn class="q-ml-lg q-px-lg" size="lg" color="black" label="Get a quick tour" icon="fa-solid fa-circle-play" no-caps flat @click="routeTo('dashboard')" />
           </div>
         </div>
         <div class="column" style="width: 45%">
@@ -229,8 +229,8 @@ export default {
   computed: {},
   watch: {},
   methods: {
-    goTo(route) {
-      this.$router.push(route);
+    routeTo(path){
+      this.$router.push(path)
     }
   },
   created() {},

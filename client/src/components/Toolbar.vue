@@ -47,8 +47,8 @@
     </q-btn>
     <q-space />
     <q-btn label="Contact" class="text-weight-light" no-caps flat />
-    <q-btn label="Log in" class="text-weight-light" no-caps flat />
-    <q-btn class="q-ml-lg q-px-lg" size="md" color="primary" label="Get Started" />
+    <q-btn label="Log in" class="text-weight-light" no-caps flat @click="routeTo('dashboard')" />
+    <q-btn class="q-ml-lg q-px-lg" size="md" color="primary" label="Get Started" @click="routeTo('dashboard')" />
   </q-toolbar>
 </template>
 
@@ -62,7 +62,11 @@ export default {
       imageSrc: '/assets/fragility.svg'
     };
   },
-  methods: {},
+  methods: {
+    routeTo(path){
+      this.$router.push(path)
+    }
+  },
   async mounted(){},
 }
 </script>
