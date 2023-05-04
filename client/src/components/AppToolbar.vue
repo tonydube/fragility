@@ -1,6 +1,6 @@
 <template>
   <q-toolbar class="q-py-sm q-px-md">
-    <q-btn @click="navigateTo('home')" round unelevated>
+    <q-btn @click="navigateTo('/')" round unelevated>
       <q-avatar square size="sm">
         <img src="../assets/logo-light.svg" />
       </q-avatar>
@@ -143,7 +143,11 @@ export default {
     };
   },
   props: ["projects"],
-  methods: {},
+  methods: {
+    navigateTo(route) {
+      this.$router.push(route);
+    }
+  },
   mounted() {
   },
 }
